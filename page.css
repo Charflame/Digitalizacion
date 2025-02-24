@@ -1,0 +1,29 @@
+body{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
+
+.contenedor{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+.cuadro{
+    width: 200px;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    align-items: center;
+    background-color: olivedrab;
+    color: lightsalmon;
+    margin: 5px;
+    transition: 0.3s;
+    border-radius: 10px;
+}
+
+.imagen{
+    width: 50%;
+    height: 50%;
+}
