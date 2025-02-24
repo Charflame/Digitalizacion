@@ -4,10 +4,28 @@ body{
     justify-content: center;
 }
 
-.contenedor{
+.estructura{
     display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr ;
+}
+
+.productos{
+    width: 66%;
+    height: 100%;
+    display:grid;
+    margin: 10px;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.lista{
+    width: 33%;
+    height: 100%;
+    display: grid;
+    margin: 10px;
+    background-color: grey;
+
 }
 
 .cuadro{
