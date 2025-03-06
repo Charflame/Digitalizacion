@@ -6,11 +6,11 @@ body{
 
 .estructura{
     display:grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr ;
 }
 
-.productos{
+.contenedor{
     width: 66%;
     height: 100%;
     display:grid;
@@ -30,13 +30,13 @@ body{
 
 .cuadro{
     width: 200px;
-    height: 100px;
-    line-height: 100px;
+    height: 300px;
+    line-height: 100%;
     text-align: center;
     align-items: center;
     background-color: olivedrab;
     color: lightsalmon;
-    margin: 5px;
+    margin: 10px;
     transition: 0.3s;
     border-radius: 10px;
 }
