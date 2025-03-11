@@ -6,7 +6,7 @@ body{
 
 .infraestructura{
     display:grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: auto 1fr;
 }
 
 .estructura{
@@ -18,8 +18,6 @@ body{
     background-color: grey;
     border-radius: 10px;
     width: 100%;
-    height: 5%;
-}
 
 .contenedor{
     width: 66%;
@@ -33,39 +31,6 @@ body{
 .eraser{
     width: 100px;
     height: 50px;
-    border-radius: 10px;
-}
-
-.boton0{
-    border-radius: 10px;
-}
-
-
-.boton1{
-    border-radius: 10px;
-}
-
-.boton2{
-    border-radius: 10px;
-}
-
-.boton3{
-    border-radius: 10px;
-}
-
-.boton4{
-    border-radius: 10px;
-}
-
-.boton5{
-    border-radius: 10px;
-}
-
-.boton6{
-    border-radius: 10px;
-}
-
-.boton7{
     border-radius: 10px;
 }
 
@@ -83,7 +48,7 @@ body{
 
 .cuadro{
     width: 200px;
-    height: 300px;
+    height: 250px;
     line-height: 100%;
     text-align: center;
     align-items: center;
@@ -97,4 +62,10 @@ body{
 .imagen{
     width: 50%;
     height: 50%;
+}
+
+.cuadro:hover{
+    width: 250px;
+    height: 300px;
+    background-color: darkgreen;
 }

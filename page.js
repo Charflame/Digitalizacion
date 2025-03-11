@@ -19,20 +19,16 @@ function anadir_productos(){
     let nuevoDiv = document.createElement("div");
     let nuevoDivtexto = document.createElement("div");
     let nuevoImg = document.createElement("img");
-    let nuevoBoton = document.createElement("button")
 
     
     nuevoDivtexto.textContent = productos[numero_cuadros] + " " + precios[numero_cuadros];
     nuevoImg.src= imagenes[numero_cuadros]
-    nuevoBoton.textContent = "Comprar"
     nuevoDiv.appendChild(nuevoImg)
     nuevoDiv.appendChild(nuevoDivtexto)
-    nuevoDiv.appendChild(nuevoBoton)
     
 
     nuevoDiv.classList.add("cuadro")
     nuevoImg.classList.add("imagen")
-    nuevoBoton.classList.add("boton" + numero_cuadros)
 
     contenedor.appendChild(nuevoDiv);
     numero_cuadros = numero_cuadros+1;
