@@ -2,6 +2,7 @@ body{
     display: flex;
     align-items:center;
     justify-content: center;
+    background-color: lightsalmon;
 }
 
 .infraestructura{
@@ -12,13 +13,17 @@ body{
 .estructura{
     display:grid;
     grid-template-columns: 1fr 1fr;
+    align-items: center;
+    align-content: center;
+    text-align: center;
 }
 
 .entrada{
     background-color: grey;
     border-radius: 10px;
     width: 100%;
-
+    text-align: center;
+}
 .contenedor{
     width: 66%;
     height: 100%;
