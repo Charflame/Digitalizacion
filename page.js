@@ -13,7 +13,7 @@ let boton = document.getElementById("boton");
 let numero_cuadros = 0;
 let contenedor = document.getElementById("contenedor")
 let numero_productos = 0  
-let lista = document.getElementById("lista")  
+let carrito = document.getElementById("carrito")  
 let borrador = document.getElementById("eraser")
 
 function anadir_productos(){
@@ -43,7 +43,11 @@ function comprar_productos(numero){
     let nuevaCompra = document.createElement("div");
     nuevaCompra.textContent= productos[numero] + " " + precios[numero]
 
-    lista.appendChild(nuevaCompra)
+    nuevaCompra.classList.add("compra")
+    nuevaCompra.id = "compra"
+
+    numero_productos = numero_productos+1
+    carrito.appendChild(nuevaCompra)
 }
 
 for(let contador = 0; contador < 8; contador = contador + 1){
@@ -54,5 +58,16 @@ for(let contador = 0; contador < 8; contador = contador + 1){
 
 function borrar_productos(){
 
+    let compras = document.getElementsByClassName("compra");
+
+    compras = Array.from(compras);
+
+    compras.forEach(compra => {
+        carrito.removeChild(compra);
+    });
+
+    numero_productos = 0;
 }
+
+borrador.addEventListener("click", borrar_productos)
 
