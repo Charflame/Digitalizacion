@@ -2,7 +2,7 @@ body{
     display: flex;
     align-items:center;
     justify-content: center;
-    background-color: lightsalmon;
+    background-color: rgb(61, 61, 61);
 }
 
 .infraestructura{
@@ -79,6 +79,7 @@ body{
 .imagen{
     width: 50%;
     height: 50%;
+    border-radius: 5px;
 }
 
 .compra{
@@ -89,7 +90,18 @@ body{
     border-radius: 5px;
 }
 
+.sumaprecios{
+    width: 100px;
+    height: 50px;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    background-color: lightgray;
+}
+
 .cuadro:hover{
     transform: scale(1.05);
-    background-color: darkgreen;
+    background-color: green;
 }

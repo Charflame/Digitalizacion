@@ -8,6 +8,7 @@ imagenes = ["https://assetsio.gnwcdn.com/co49x5.jpg?width=1200&height=1200&fit=b
 "https://upload.wikimedia.org/wikipedia/en/thumb/f/f8/Etvideogamecover.jpg/220px-Etvideogamecover.jpg",
 "https://preview.redd.it/lvwd7gkc4jy71.png?auto=webp&s=96211f551247a003ad9e7689d77e7c97d5c4220c"]
 precios = ["30€", "10€","8€", "10€", "60€", "15€", "40€", "32€"]
+preciosint = [30, 10, 8, 10, 60, 15, 40, 32]
 
 let boton = document.getElementById("boton");
 let numero_cuadros = 0;
@@ -15,14 +16,18 @@ let contenedor = document.getElementById("contenedor")
 let numero_productos = 0  
 let carrito = document.getElementById("carrito")  
 let borrador = document.getElementById("eraser")
+let precioTotal = document.getElementById("precioTotal")
+let Total = 0
+let sumaprecios = document.createElement("h3");
+precioTotal.appendChild(sumaprecios)
+sumaprecios.textContent = "Total: " + Total
+sumaprecios.classList.add("sumaprecios")
 
 function anadir_productos(){
 
     let nuevoDiv = document.createElement("div");
     let nuevoDivtexto = document.createElement("div");
     let nuevoImg = document.createElement("img");
-
-    
 
     nuevoDivtexto.textContent = productos[numero_cuadros] + " " + precios[numero_cuadros]; 
     nuevoImg.src = imagenes[numero_cuadros]
@@ -46,6 +51,9 @@ function comprar_productos(numero){
     nuevaCompra.classList.add("compra")
     nuevaCompra.id = "compra"
 
+    Total = Total + preciosint[numero]
+    sumaprecios.textContent = "Total: " + Total
+
     numero_productos = numero_productos+1
     carrito.appendChild(nuevaCompra)
 }
@@ -67,6 +75,8 @@ function borrar_productos(){
     });
 
     numero_productos = 0;
+    Total = 0;
+    sumaprecios.textContent = "Total: " + Total
 }
 
 borrador.addEventListener("click", borrar_productos)
