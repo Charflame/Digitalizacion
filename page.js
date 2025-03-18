@@ -20,7 +20,7 @@ let precioTotal = document.getElementById("precioTotal")
 let Total = 0
 let sumaprecios = document.createElement("h3");
 precioTotal.appendChild(sumaprecios)
-sumaprecios.textContent = "Total: " + Total
+sumaprecios.textContent = "Total: " + Total + "€"
 sumaprecios.classList.add("sumaprecios")
 
 function anadir_productos(){
@@ -52,7 +52,7 @@ function comprar_productos(numero){
     nuevaCompra.id = "compra"
 
     Total = Total + preciosint[numero]
-    sumaprecios.textContent = "Total: " + Total
+    sumaprecios.textContent = "Total: " + Total + "€"
 
     numero_productos = numero_productos+1
     carrito.appendChild(nuevaCompra)
@@ -76,7 +76,7 @@ function borrar_productos(){
 
     numero_productos = 0;
     Total = 0;
-    sumaprecios.textContent = "Total: " + Total
+    sumaprecios.textContent = "Total: " + Total + "€"
 }
 
 borrador.addEventListener("click", borrar_productos)
